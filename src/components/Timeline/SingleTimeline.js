@@ -1,6 +1,7 @@
 import React from 'react';
 import { VerticalTimelineElement } from 'react-vertical-timeline-component';
 import HoverVideoPlayer from 'react-hover-video-player';
+import Stuff from './Stuff';
 
 import {
   iconStyle,
@@ -10,12 +11,12 @@ import {
   Title,
 } from './SingleTimeline.css';
 
-const SingleTimeline = ({ title, text, icon, img, video, date }) => (
+const SingleTimeline = ({ title, text, icon, img, video, aside }) => (
   <VerticalTimelineElement
     className='vertical-timeline-element--work'
     contentStyle={contentStyle}
     contentArrowStyle={{ borderRight: '7px solid  #2B3A40' }}
-    date={date}
+    date={<Stuff data={aside} />}
     iconStyle={iconStyle}
     icon={icon}
   >
