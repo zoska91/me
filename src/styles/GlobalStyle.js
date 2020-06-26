@@ -1,7 +1,13 @@
 import { createGlobalStyle } from 'styled-components';
 
+import ArapeyRegular from '../assets/fonts/ArapeyRegular/Arapey Regular/Arapey-Regular.woff';
+
 const GlobalStyle = createGlobalStyle`
 
+@font-face {
+font-family: 'Arapey Regular';
+src: (${ArapeyRegular}) format("woff");
+}
 
 * {
     box-sizing: border-box;
@@ -17,6 +23,7 @@ body, html {
     margin: 0;
     padding: 0;
     overflow-x:hidden;
+    font-family: 'Raleway', sans-serif;
 }
 
 ul {

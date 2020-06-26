@@ -10,7 +10,7 @@ const Header = () => {
       <Text>
         <Name>Zofia Janas</Name>
         <Description>
-          {t('introduce')} <span> {t('myself')} </span>
+          {t('Header.introduce')} <span> {t('Header.myself')} </span>
         </Description>
       </Text>
     </HeaderStyled>
