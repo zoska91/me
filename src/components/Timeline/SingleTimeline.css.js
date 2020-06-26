@@ -14,7 +14,7 @@ export const Title = styled.h3`
   text-align: justify;
   font-weight: 600;
   letter-spacing: 1px;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: ${({ theme }) => theme.secondary};
 `;
 

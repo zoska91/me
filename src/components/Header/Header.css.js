@@ -27,7 +27,7 @@ export const Name = styled.p`
 export const Description = styled.p`
   font-size: 5vh;
   margin: 0;
-  margin-left: 40vw;
+  margin-left: 35vw;
   font-style: italic;
   font-family: 'Calligraffitti', cursive;
   span {

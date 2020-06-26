@@ -1,67 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { useTranslation } from 'react-i18next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import MenuBookTwoToneIcon from '@material-ui/icons/MenuBookTwoTone';
-import ChildFriendlyIcon from '@material-ui/icons/ChildFriendly';
-import {
-  faReact,
-  faNodeJs,
-  faAngular,
-} from '@fortawesome/free-brands-svg-icons';
 import SingleTimeline from './SingleTimeline';
-import { Wrapper, Title, Summary } from './Timeline.css';
+import { Wrapper, Text, Buttons, Button, PickStory } from './Timeline.css';
 
-import ImgCode from '../../assets/code.jpeg';
-import ImgNode from '../../assets/Node.png';
-import VideoProjectFirst from '../../assets/firstProject.mp4';
-import VideoFirstProjectReact from '../../assets/firstProjectReact.mp4';
-
-const elements = [
-  {
-    index: 0,
-    img: ImgCode,
-    icon: <MenuBookTwoToneIcon />,
-    aside: ['2018 - 06'],
-  },
-  {
-    index: 1,
-    video: VideoProjectFirst,
-    icon: <ChildFriendlyIcon />,
-    aside: ['html', 'css', 'js', 'rwd'],
-  },
-  {
-    index: 2,
-    video: VideoFirstProjectReact,
-    icon: <FontAwesomeIcon icon={faReact} size='2x' />,
-    aside: ['html', 'css', 'js', 'react', 'api'],
-  },
-  {
-    index: 3,
-    img: ImgNode,
-    icon: <FontAwesomeIcon icon={faNodeJs} size='2x' />,
-    aside: ['html', 'css', 'js', 'rwd', 'node', 'db', 'pug'],
-  },
-  {
-    index: 4,
-    video: VideoProjectFirst,
-    icon: <FontAwesomeIcon icon={faAngular} size='2x' />,
-    aside: ['html', 'css', 'js', 'rwd', 'angular', 'db', 'map'],
-  },
-  {
-    index: 5,
-    img: ImgCode,
-    icon: <FontAwesomeIcon icon={faReact} size='2x' />,
-    aside: ['html', 'css', 'js', 'rwd', 'react', 'graphql', 'db', 'api'],
-  },
-];
+import elements from './data';
 
 const Timeline = () => {
   const { t } = useTranslation();
+  const [activePart, setActivePart] = useState('short');
 
-  const timelineElements = elements.map(el => (
+  let timelineElements = activePart === 'short' ? elements.slice(-2) : elements;
+
+  timelineElements = timelineElements.map(el => (
     <SingleTimeline
       img={el.img}
       text={t(`Timeline.${el.index}.text`)}
@@ -74,9 +27,26 @@ const Timeline = () => {
 
   return (
     <Wrapper>
-      <Title>{t('Story')}</Title>
+      <PickStory>
+        <p>{t('Pick')}</p>
+        <Buttons>
+          <Button
+            active={activePart === 'short'}
+            onClick={() => setActivePart('short')}
+          >
+            {t('Buttons.short')}
+          </Button>
+          <Button
+            active={activePart === 'long'}
+            onClick={() => setActivePart('long')}
+          >
+            {t('Buttons.long')}
+          </Button>
+        </Buttons>
+      </PickStory>
+      <Text>{t('Story')}</Text>
       <VerticalTimeline>{timelineElements}</VerticalTimeline>
-      <Summary>{t('Summary')}</Summary>
+      <Text>{t('Summary')}</Text>
     </Wrapper>
   );
 };

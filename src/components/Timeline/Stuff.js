@@ -87,7 +87,7 @@ const Stuff = ({ data }) => (
     {data.includes('api') && (
       <ApiIcon
         style={{
-          marginLeft: '1vw',
+          marginLeft: '0.6vw',
           height: '2.5em',
           width: '2.5em',
           fill: 'white',

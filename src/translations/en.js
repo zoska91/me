@@ -3,6 +3,11 @@ export default {
     introduce: 'let me introduce',
     myself: 'myself',
   },
+  Pick: 'what story interests you?',
+  Buttons: {
+    short: 'short story',
+    long: 'long story',
+  },
   Story: '. . . story of mine . . . ',
   Timeline: [
     {
@@ -36,9 +41,13 @@ export default {
     },
     {
       title:
-        'Im więcej wiem, tym bardziej wydawało mi się, ze nic nie wiem... Im bardziej coś rozumiem, tym bardziej wydaje mi się, że nigdy nie zrozumiem wszystkiego co bym chciała...',
-      text:
-        'Poświecam jednak kodowaniu mnóstwo czasu, potrafię godzinami nie wstać z krzesła by nagle spojrzeć na zegar i stwierdzić, ze czas spać. Ostatni projekt prezentuje [mniej wiecej] poziom moich umiejętności, niestety nie jest jeszcze skończony, ponieważ chcę go dopieścić w każdym szczególe',
+        'Im więcej wiem, tym bardziej wydaje mi się, ze nic nie wiem... Im bardziej coś rozumiem, tym bardziej mam wrażenie mi się, że nigdy nie zrozumiem wszystkiego co bym chciała...',
+      text: '',
+    },
+    {
+      title:
+        'Powyższy projekt prezentuje [mniej wiecej] poziom moich umiejętności, niestety nie jest jeszcze skończony, ponieważ chcę go dopieścić w każdym szczególe. A tutaj... ta skromna strona o mnie.',
+      text: '',
     },
   ],
   Summary: '. . . it all led me to this place . . . ',
