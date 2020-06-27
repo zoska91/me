@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
-import 'react-vertical-timeline-component/style.min.css';
 import { useTranslation } from 'react-i18next';
+import 'react-vertical-timeline-component/style.min.css';
 
-import SingleTimeline from './SingleTimeline';
 import { Wrapper, Text, Buttons, Button, PickStory } from './Timeline.css';
+import SingleTimeline from './SingleTimeline';
 
 import elements from './data';
 
@@ -16,12 +16,17 @@ const Timeline = () => {
 
   timelineElements = timelineElements.map(el => (
     <SingleTimeline
+      key={el.index}
       img={el.img}
       text={t(`Timeline.${el.index}.text`)}
       title={t(`Timeline.${el.index}.title`)}
       icon={el.icon}
       video={el.video}
       aside={el.aside}
+      index={el.index}
+      length={timelineElements.length}
+      github={el.github}
+      url={el.url}
     />
   ));
 
@@ -44,6 +49,7 @@ const Timeline = () => {
           </Button>
         </Buttons>
       </PickStory>
+
       <Text>{t('Story')}</Text>
       <VerticalTimeline>{timelineElements}</VerticalTimeline>
       <Text>{t('Summary')}</Text>

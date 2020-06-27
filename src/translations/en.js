@@ -3,7 +3,7 @@ export default {
     introduce: 'let me introduce',
     myself: 'myself',
   },
-  Pick: 'what story interests you?',
+  Pick: 'what story are you intrested in?',
   Buttons: {
     short: 'short story',
     long: 'long story',
@@ -51,4 +51,15 @@ export default {
     },
   ],
   Summary: '. . . it all led me to this place . . . ',
+  Form: {
+    name: 'name',
+    email: 'email',
+    text: 'message',
+    mailRequired: 'mail is required',
+    mailWrong: 'something is wrong with your email',
+    textRequired: 'you really want send me only e-mail? text is required',
+    textLength:
+      'i understand you have a lot to say, but be cerfull. the is a limit - 1000',
+    submit: 'send message',
+  },
 };

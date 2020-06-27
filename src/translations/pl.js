@@ -43,4 +43,15 @@ export default {
     },
   ],
   Summary: '. . . wszystko to zaprowadziło mnie to tego miejsca. . . ',
+  Form: {
+    name: 'name',
+    email: 'email',
+    text: 'message',
+    mailRequired: 'mail is required',
+    mailWrong: 'something is wrong with your email',
+    textRequired: 'you really want send me only e-mail? text is required',
+    textLength:
+      'i understand you have a lot to say, but be cerfull. the is a limit - 1000',
+    submit: 'wyślij wiadomość',
+  },
 };

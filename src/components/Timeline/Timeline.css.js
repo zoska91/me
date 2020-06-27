@@ -5,21 +5,28 @@ export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.secondary};
   position: relative;
   padding-top: 5vh;
+
+  .vertical-timeline-element-icon {
+    svg {
+      transform: translateX(-10%);
+    }
+  }
 `;
 
 export const Text = styled.h2`
   text-align: center;
   font-weight: 400;
-  padding: 5vh 0;
+  padding: 5vh 2vw;
   margin: 0;
   color: ${({ theme }) => theme.primary};
 `;
 
 export const PickStory = styled.div`
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 10vh;
   width: 90vw;
   max-width: 1024px;
+  font-style: italic;
 
   @media (min-width: 460px) {
     width: 70vw;
@@ -33,9 +40,11 @@ export const PickStory = styled.div`
 export const Buttons = styled.div`
   display: flex;
   justify-content: space-between;
+  padding: 0 1vw;
 `;
 
 export const Button = styled.button`
+  position: relative;
   font-size: 2rem;
   font-family: 'Calligraffitti', cursive;
   -webkit-text-stroke: 0.5px black;
@@ -44,11 +53,27 @@ export const Button = styled.button`
   background: none;
   cursor: pointer;
 
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 0;
+    background-color: ${({ theme }) => theme.primary};
+    bottom: -5px;
+    transform: translateX(-10%);
+    transition: 0.3s;
+  }
+
+  &:hover::before {
+    width: 120%;
+  }
+
   @media (min-width: 680px) {
     font-size: 2.5rem;
   }
 
   @media (min-width: 680px) {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
 `;
