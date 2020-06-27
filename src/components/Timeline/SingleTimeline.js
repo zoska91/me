@@ -15,6 +15,8 @@ import {
   Title,
   Links,
   Link,
+  InfoHover,
+  Headline,
 } from './SingleTimeline.css';
 
 const SingleTimeline = ({
@@ -25,9 +27,9 @@ const SingleTimeline = ({
   video,
   aside,
   index,
-  length,
   github,
   url,
+  headline,
 }) => (
   <VerticalTimelineElement
     className='vertical-timeline-element--work'
@@ -37,11 +39,7 @@ const SingleTimeline = ({
     iconStyle={iconStyle}
     icon={icon}
   >
-    <Links
-      index={index}
-      firstSide={length % 2 !== 0 ? 'right' : 'left'}
-      secondSide={length % 2 === 0 ? 'right' : 'left'}
-    >
+    <Links index={index}>
       {github && (
         <Link href={github} target='_blank'>
           <FontAwesomeIcon icon={faCode} size='2x' />
@@ -52,16 +50,20 @@ const SingleTimeline = ({
           <FontAwesomeIcon icon={faGithub} size='2x' />
         </Link>
       )}
+      <Headline>{headline}</Headline>
     </Links>
     <Title className='vertical-timeline-element-title'>{title}</Title>
     <Text>{text}</Text>
     {img && <Img src={img} alt='' />}
     {video && (
-      <HoverVideoPlayer
-        videoSrc={video}
-        loadingOverlay={<div className='loading-overlay'>Loading...</div>}
-        muted
-      />
+      <>
+        <InfoHover>hover to run video</InfoHover>
+        <HoverVideoPlayer
+          videoSrc={video}
+          loadingOverlay={<div className='loading-overlay'>Loading...</div>}
+          muted
+        />
+      </>
     )}
   </VerticalTimelineElement>
 );

@@ -4,13 +4,17 @@ export const Wrapper = styled.div`
   min-height: 100vh;
   background-color: ${({ theme }) => theme.secondary};
   position: relative;
-  padding-top: 5vh;
 
   .vertical-timeline-element-icon {
     svg {
       transform: translateX(-10%);
     }
   }
+`;
+
+export const Header = styled.div`
+  background-color: white;
+  padding: 5vh 0;
 `;
 
 export const Text = styled.h2`
@@ -23,7 +27,7 @@ export const Text = styled.h2`
 
 export const PickStory = styled.div`
   text-align: center;
-  margin: 0 auto 10vh;
+  margin: 0 auto;
   width: 90vw;
   max-width: 1024px;
   font-style: italic;
@@ -46,7 +50,8 @@ export const Buttons = styled.div`
 export const Button = styled.button`
   position: relative;
   font-size: 2rem;
-  font-family: 'Calligraffitti', cursive;
+  font-family: 'Charmonman', cursive;
+  font-weight: bold;
   -webkit-text-stroke: 0.5px black;
   color: ${({ theme, active }) => (active ? theme.accent : 'transparent')};
   border: none;
