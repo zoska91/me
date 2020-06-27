@@ -16,7 +16,7 @@ export const Wrapper = styled.div`
 export const Text = styled.h2`
   text-align: center;
   font-weight: 400;
-  padding: 5vh 0;
+  padding: 5vh 2vw;
   margin: 0;
   color: ${({ theme }) => theme.primary};
 `;
