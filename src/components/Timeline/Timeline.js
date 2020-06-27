@@ -22,6 +22,10 @@ const Timeline = () => {
       icon={el.icon}
       video={el.video}
       aside={el.aside}
+      index={el.index}
+      length={timelineElements.length}
+      github={el.github}
+      url={el.url}
     />
   ));
 
@@ -44,6 +48,7 @@ const Timeline = () => {
           </Button>
         </Buttons>
       </PickStory>
+
       <Text>{t('Story')}</Text>
       <VerticalTimeline>{timelineElements}</VerticalTimeline>
       <Text>{t('Summary')}</Text>

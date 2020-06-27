@@ -10,10 +10,8 @@ import { theme } from './styles/theme';
 const App = () => (
   <ThemeProvider theme={theme}>
     <GlobalStyle />
-    <div className='App'>
-      <Header />
-      <Timeline />
-    </div>
+    <Header />
+    <Timeline />
   </ThemeProvider>
 );
 

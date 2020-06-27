@@ -3,7 +3,7 @@ export default {
     introduce: 'let me introduce',
     myself: 'myself',
   },
-  Pick: 'what story interests you?',
+  Pick: 'what story are you intrested in?',
   Buttons: {
     short: 'short story',
     long: 'long story',
