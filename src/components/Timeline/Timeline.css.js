@@ -5,6 +5,12 @@ export const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.secondary};
   position: relative;
   padding-top: 5vh;
+
+  .vertical-timeline-element-icon {
+    svg {
+      transform: translateX(-10%);
+    }
+  }
 `;
 
 export const Text = styled.h2`
