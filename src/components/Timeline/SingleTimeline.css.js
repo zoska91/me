@@ -10,6 +10,13 @@ export const contentStyle = {
   color: '#fff',
 };
 
+export const Headline = styled.span`
+  font-size: 2rem;
+  font-weight: bold;
+  font-style: italic;
+  margin: 0 30px;
+`;
+
 export const Title = styled.h3`
   text-align: justify;
   font-weight: 600;
@@ -31,9 +38,11 @@ export const Img = styled.img`
 
 export const Links = styled.div`
   padding: 1vh 0 3vh;
+  display: flex;
 
-  text-align: ${({ index, firstSide, secondSide }) =>
-    index % 2 === 0 ? firstSide : secondSide};
+  @media (min-width: 1170px) {
+    flex-direction: ${({ index }) => (index % 2 === 0 ? 'row-reverse' : 'row')};
+  }
 `;
 
 export const Link = styled.a`
@@ -52,4 +61,13 @@ export const Link = styled.a`
       transform: rotateY(180deg);
     }
   }
+`;
+
+export const InfoHover = styled.p`
+  position: absolute;
+  color: ${({ theme }) => theme.accent};
+  font-style: italic;
+  transform: translateY(-120%);
+  font-weight: bold;
+  z-index: 99;
 `;

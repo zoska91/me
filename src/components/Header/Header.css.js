@@ -20,22 +20,26 @@ export const Text = styled.div`
 export const Name = styled.p`
   margin: 0;
   font-size: 10vh;
-  font-family: 'Arapey', serif;
-  font-family: 'Calligraffitti', cursive;
+  font-family: 'Charmonman', cursive;
 `;
 
 export const Description = styled.p`
-  font-size: 5vh;
+  font-size: 3vh;
   margin: 0;
   margin-left: 35vw;
   font-style: italic;
-  font-family: 'Calligraffitti', cursive;
+  font-family: 'Charmonman', cursive;
+
+  @media (min-width: 900px) {
+    font-size: 4vh;
+  }
+
   span {
     color: ${({ theme }) => theme.accent};
   }
 
   @media (min-width: 500px) {
     margin-left: 20vw;
-    font-family: 'Calligraffitti', cursive;
+    font-family: 'Charmonman', cursive;
   }
 `;

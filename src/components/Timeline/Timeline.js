@@ -3,7 +3,14 @@ import { VerticalTimeline } from 'react-vertical-timeline-component';
 import { useTranslation } from 'react-i18next';
 import 'react-vertical-timeline-component/style.min.css';
 
-import { Wrapper, Text, Buttons, Button, PickStory } from './Timeline.css';
+import {
+  Wrapper,
+  Text,
+  Buttons,
+  Button,
+  PickStory,
+  Header,
+} from './Timeline.css';
 import SingleTimeline from './SingleTimeline';
 
 import elements from './data';
@@ -14,16 +21,17 @@ const Timeline = () => {
 
   let timelineElements = activePart === 'short' ? elements.slice(-2) : elements;
 
-  timelineElements = timelineElements.map(el => (
+  timelineElements = timelineElements.map((el, i) => (
     <SingleTimeline
       key={el.index}
+      headline={el.title}
       img={el.img}
       text={t(`Timeline.${el.index}.text`)}
       title={t(`Timeline.${el.index}.title`)}
       icon={el.icon}
       video={el.video}
       aside={el.aside}
-      index={el.index}
+      index={i}
       length={timelineElements.length}
       github={el.github}
       url={el.url}
@@ -32,24 +40,25 @@ const Timeline = () => {
 
   return (
     <Wrapper>
-      <PickStory>
-        <p>{t('Pick')}</p>
-        <Buttons>
-          <Button
-            active={activePart === 'short'}
-            onClick={() => setActivePart('short')}
-          >
-            {t('Buttons.short')}
-          </Button>
-          <Button
-            active={activePart === 'long'}
-            onClick={() => setActivePart('long')}
-          >
-            {t('Buttons.long')}
-          </Button>
-        </Buttons>
-      </PickStory>
-
+      <Header>
+        <PickStory>
+          <p>{t('Pick')}</p>
+          <Buttons>
+            <Button
+              active={activePart === 'short'}
+              onClick={() => setActivePart('short')}
+            >
+              {t('Buttons.short')}
+            </Button>
+            <Button
+              active={activePart === 'long'}
+              onClick={() => setActivePart('long')}
+            >
+              {t('Buttons.long')}
+            </Button>
+          </Buttons>
+        </PickStory>
+      </Header>
       <Text>{t('Story')}</Text>
       <VerticalTimeline>{timelineElements}</VerticalTimeline>
       <Text>{t('Summary')}</Text>

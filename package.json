@@ -23,6 +23,7 @@
     "react-dom": "^16.13.1",
     "react-hover-video-player": "^6.6.1",
     "react-i18next": "^11.7.0",
+    "react-notifications-component": "^2.4.0",
     "react-scripts": "3.4.1",
     "react-vertical-timeline-component": "^3.0.2",
     "styled-components": "^5.1.1",

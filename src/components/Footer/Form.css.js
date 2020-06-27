@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
 
 export const Button = styled.button`
   font-size: 2rem;
-  font-family: 'Calligraffitti', cursive;
+  font-family: 'Charmonman', cursive;
   -webkit-text-stroke: 0.5px ${({ theme }) => theme.secondary};
   color: transparent;
   border: none;

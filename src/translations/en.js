@@ -12,42 +12,41 @@ export default {
   Timeline: [
     {
       title:
-        'Na początku powstał internet... I każdy wiedział, że to będzie dobre.',
+        'In the beginning was created internet... And everybodyu knows that it will be good.',
       text:
-        'Dzięki zasobom internetu moja droga na szczyt rozpoczęła się od tutoriali na YT, następnie kursów na Udemy, a do dzisiaj kontynuowana jest dzięki różnego rodzaju artkułom, filkmikom, dokumentacjom, itp.',
+        'Thanks to the Internet resources my way to the top started from tutorials on YT and Udemy and to this day it continues thanks to articles, films, documentations from internet.',
     },
     {
       title:
-        'A potem... stworzyłam swój pierwszy projekt. I wiedziałam, że to.... nie będzie dobre.',
+        "And then.. I created my first project. And I knew... it can't be good",
       text:
-        'Po drodze popełniła mnóstwo mniejszych i większych przestępst w postaci okropnego kodu, z nadzieją na lepsze jutro.',
+        'Along the way I commited a lot of smaller and bigger crimes - really bad code. But I had hope for better tommorow',
     },
     {
       title:
-        'Było strasznie dużo kodu... Setki linii, tysiące literek, znaczków... Gubiłam się w plikach.',
+        'There was a lot of terribly, long code... Hundreds of lines, thousands of letters, stamps... I used to get lost in files.',
       text:
-        'W międzyczasie poznałam takie narzędzia jak Gulp, Wepack czy Parcel, a przez moje paluszki przeszły takie cuda jak OOP, SASS, ale wciąż coś mi nie pasowało.... Wtedy poznałam Reacta i zdecydowałam się połączyć go z nauką REST. To było to!',
+        "In the meantime, I got to know tools like Gulp, Wepack and Parcel, and things like OOP, SASS, but I still didn't like something ... Then I met React and decided to connected it with REST. That was it! ",
     },
     {
       title:
-        'Poziom irytacji sięgał zenitu, kiedy po odświeżeniu strony, wszystko się resetowało...',
+        'The level of irritation reaches its climax, when I refresh browser and then everithing was reset...',
       text:
-        'Tym tropem dotarłam do Node.js, a właściwie do biblioteki - Express (w niezbyt eksprezowym tempie, ale nauka wymaga czasu i cierpliwości) i (wtedy) myślałam, że stworzyłam coś niesamowitego. Z perspektywy czasu widzę wiele niedociągnieć, ale śmiało, możesz sam/a ocenić.',
+        'By that logic, I got to Node.js, or actually to the library - Express (not very expressively fast, but learning takes time and patience) and [then] I thought that I created something amazing. In retrospect, I see many mistakes, but go ahead, you can check this out',
     },
     {
-      title: 'Przez chwile byłam zdradzieckim brutusem... ',
+      title: 'For a while I was a treacherous Brutus ...',
       text:
-        'Coś sprawiło, że chciałam spróbować co kryje w sobie największy konkurst Reacta - Angular. Doświadczenie było krótkie, projekt nie został skończony, ale moja ciekawość została zaspokojona.',
+        "Something made me want to check what React's biggest competitor - Angular - hides. The experience was short, the project is not completed, but my curiosity has been satisfied. ",
     },
     {
-      title:
-        'Im więcej wiem, tym bardziej wydaje mi się, ze nic nie wiem... Im bardziej coś rozumiem, tym bardziej mam wrażenie mi się, że nigdy nie zrozumiem wszystkiego co bym chciała...',
-      text: '',
+      title: 'The more I know, the more I think I know nothing ...',
+      text:
+        'The level of my skills [more or less] presents this project. However, it is not finished, I am still working on it.',
     },
     {
-      title:
-        'Powyższy projekt prezentuje [mniej wiecej] poziom moich umiejętności, niestety nie jest jeszcze skończony, ponieważ chcę go dopieścić w każdym szczególe. A tutaj... ta skromna strona o mnie.',
-      text: '',
+      title: 'This site was created to summarize where I am',
+      text: "I hope I didn't bore you",
     },
   ],
   Summary: '. . . it all led me to this place . . . ',
@@ -61,5 +60,9 @@ export default {
     textLength:
       'i understand you have a lot to say, but be cerfull. the is a limit - 1000',
     submit: 'send message',
+    succes: 'Thanks for your message',
+    succesText: 'I answer as soon as possible! promise! :)',
+    fail: 'Ooops, something went wrong',
+    failText: 'Try again or send me email to zofiajanas@int.pl',
   },
 };
