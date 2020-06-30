@@ -12,41 +12,42 @@ export default {
   Timeline: [
     {
       title:
-        'In the beginning was created internet... And everybodyu knows that it will be good.',
+        'At the beginning the internet was created... And everyone knew then that the internet would be good.',
       text:
-        'Thanks to the Internet resources my way to the top started from tutorials on YT and Udemy and to this day it continues thanks to articles, films, documentations from internet.',
+        'Thanks to the internet resources my way to the top has started from tutorials in youtube or Udemy. Until this day it is continued due to different articles, films, documentations.',
     },
     {
       title:
-        "And then.. I created my first project. And I knew... it can't be good",
+        'Afterwards, I created my first project. And I knew... it would not be good',
       text:
-        'Along the way I commited a lot of smaller and bigger crimes - really bad code. But I had hope for better tommorow',
+        'Along the way I made various mistakes related to the dirty coding, with the hope for the better tomorrow...',
     },
     {
       title:
-        'There was a lot of terribly, long code... Hundreds of lines, thousands of letters, stamps... I used to get lost in files.',
+        'There was a lot of terribly, long code... Hundreds of lines, thousands of letters... I used to get lost in files.',
       text:
-        "In the meantime, I got to know tools like Gulp, Wepack and Parcel, and things like OOP, SASS, but I still didn't like something ... Then I met React and decided to connected it with REST. That was it! ",
+        'In the meantime, I got to know tools like Gulp, Wepack and Parcel, and things like OOP, SASS, but something was still not right.... TI got to know React and I decided to connect it with REST. That was it! ',
     },
     {
       title:
-        'The level of irritation reaches its climax, when I refresh browser and then everithing was reset...',
+        'My irritation level run high when everything was reset after I had refreshed the website.',
       text:
-        'By that logic, I got to Node.js, or actually to the library - Express (not very expressively fast, but learning takes time and patience) and [then] I thought that I created something amazing. In retrospect, I see many mistakes, but go ahead, you can check this out',
+        'On the track I reached the NodeJS, actually the Express Library (although, I did not reach it with the express tempo... but learning takes time and patience). Then I thought I created something exceptional, however, in retrospect I see some deficiency. But go ahead, you can check this out',
     },
     {
-      title: 'For a while I was a treacherous Brutus ...',
+      title: 'For a while I betrayed one technology in favour of the other one',
       text:
-        "Something made me want to check what React's biggest competitor - Angular - hides. The experience was short, the project is not completed, but my curiosity has been satisfied. ",
+        'Something made me check what the biggest rival of the React -  Angular - hides. The experience was short, the project is not completed, but my curiosity has been satisfied. ',
     },
     {
-      title: 'The more I know, the more I think I know nothing ...',
+      title: "The more I know, the more I know I don't know...",
       text:
-        'The level of my skills [more or less] presents this project. However, it is not finished, I am still working on it.',
+        'This project presents the level of my skills. However, it is not finished, I am still working on it.',
     },
     {
-      title: 'This site was created to summarize where I am',
-      text: "I hope I didn't bore you",
+      title:
+        'TThis website has been created to summarize all of the actions that lead me to the place where I am now',
+      text: 'I hope you enjoy :) ',
     },
   ],
   Summary: '. . . it all led me to this place . . . ',

@@ -1,11 +1,12 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Formik, Form as FormFormik } from 'formik';
-import * as Yup from 'yup';
 import { store } from 'react-notifications-component';
-import FormElement from './FormElement';
+import * as Yup from 'yup';
 
-import { Wrapper, Button } from './Form.css';
+import FormElement from './FormElement';
+import { Wrapper } from './Form.css';
+import Button from '../Shared/Button';
 
 const Form = () => {
   const { t } = useTranslation();
