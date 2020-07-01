@@ -1,12 +1,13 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Formik, Form as FormFormik } from 'formik';
-import { store } from 'react-notifications-component';
 import * as Yup from 'yup';
 
 import FormElement from './FormElement';
 import { Wrapper } from './Form.css';
 import Button from '../Shared/Button';
+
+import notification from '../Shared/notification';
 
 const Form = () => {
   const { t } = useTranslation();
@@ -20,7 +21,7 @@ const Form = () => {
       .max(1000, t('Form.textLength')),
   });
 
-  const handleSubmit = async values => {
+  const handleSubmit = async (values, resetForm) => {
     const { name, email, text } = values;
     try {
       const response = await fetch('https://formspree.io/xpzyjlpj', {
@@ -34,36 +35,13 @@ const Form = () => {
           text,
         }),
       });
-
       if (response.status === 200) {
-        store.addNotification({
-          title: t('Form.success'),
-          message: t('Form.successText'),
-          type: 'success',
-          insert: 'top',
-          container: 'top-right',
-          animationIn: ['animated', 'fadeIn'],
-          animationOut: ['animated', 'fadeOut'],
-          dismiss: {
-            duration: 3000,
-            onScreen: true,
-          },
-        });
+        notification(t('Form.success'), t('Form.successText'), 'success');
+        resetForm.resetForm();
       }
     } catch (e) {
-      store.addNotification({
-        title: t('Form.fail'),
-        message: t('Form.failText'),
-        type: 'darnger',
-        insert: 'top',
-        container: 'top-right',
-        animationIn: ['animated', 'fadeIn'],
-        animationOut: ['animated', 'fadeOut'],
-        dismiss: {
-          duration: 3000,
-          onScreen: true,
-        },
-      });
+      notification(t('Form.fail'), t('Form.failText'), 'darnger');
+
       // eslint-disable-next-line no-console
       console.log(e);
     }
@@ -76,7 +54,7 @@ const Form = () => {
         validationSchema={contactSchema}
         onSubmit={handleSubmit}
       >
-        {({ submitForm, isSubmitting }) => (
+        {({ submitForm, isSubmitting, resetForm }) => (
           <FormFormik>
             <FormElement
               name='name'
@@ -92,7 +70,10 @@ const Form = () => {
               multiline
               rows={3}
             />
-            <Button disabled={isSubmitting} onClick={submitForm}>
+            <Button
+              disabled={isSubmitting}
+              onClick={() => submitForm(resetForm)}
+            >
               {t('Form.submit')}
             </Button>
           </FormFormik>

@@ -5,7 +5,7 @@ import HoverVideoPlayer from 'react-hover-video-player';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCode } from '@fortawesome/free-solid-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faImage } from '@fortawesome/free-regular-svg-icons';
 
 import Stuff from './Stuff';
 
@@ -51,7 +51,7 @@ const SingleTimeline = ({
         )}
         {url && (
           <Link href={url} target='_blank'>
-            <FontAwesomeIcon icon={faGithub} size='2x' />
+            <FontAwesomeIcon icon={faImage} size='2x' />
           </Link>
         )}
         <Headline>{headline}</Headline>
