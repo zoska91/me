@@ -2,16 +2,11 @@ import React, { useState } from 'react';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import { useTranslation } from 'react-i18next';
 import 'react-vertical-timeline-component/style.min.css';
+import { animateScroll as scroll } from 'react-scroll';
 
-import {
-  Wrapper,
-  Text,
-  Buttons,
-  Button,
-  PickStory,
-  Header,
-} from './Timeline.css';
+import { Wrapper, Text, Buttons, PickStory, Header } from './Timeline.css';
 import SingleTimeline from './SingleTimeline';
+import Button from '../Shared/Button';
 
 import elements from './data';
 
@@ -19,11 +14,17 @@ const Timeline = () => {
   const { t } = useTranslation();
   const [activePart, setActivePart] = useState('short');
 
+  const pichStory = type => {
+    setActivePart(type);
+    scroll.scrollTo(window.innerHeight);
+  };
+
   let timelineElements = activePart === 'short' ? elements.slice(-2) : elements;
 
   timelineElements = timelineElements.map((el, i) => (
     <SingleTimeline
       key={el.index}
+      index={i}
       headline={el.title}
       img={el.img}
       text={t(`Timeline.${el.index}.text`)}
@@ -31,7 +32,6 @@ const Timeline = () => {
       icon={el.icon}
       video={el.video}
       aside={el.aside}
-      index={i}
       length={timelineElements.length}
       github={el.github}
       url={el.url}
@@ -46,13 +46,13 @@ const Timeline = () => {
           <Buttons>
             <Button
               active={activePart === 'short'}
-              onClick={() => setActivePart('short')}
+              onClick={() => pichStory('short')}
             >
               {t('Buttons.short')}
             </Button>
             <Button
               active={activePart === 'long'}
-              onClick={() => setActivePart('long')}
+              onClick={() => pichStory('long')}
             >
               {t('Buttons.long')}
             </Button>

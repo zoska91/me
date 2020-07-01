@@ -40,16 +40,17 @@ export default {
         'Coś sprawiło, że chciałam sprawdzić co kryje w sobie największy konkurent Reacta - Angular. Doświadczenie było krótkie, projekt nie został skończony, ale moja ciekawość została zaspokojona.',
     },
     {
-      title: 'Im więcej umiem tym bardziej wydaje mi się, że nic umiem...',
+      title: 'Im więcej umiem tym bardziej wydaje mi się, że nic nie umiem...',
       text:
         'Poziom moim umiejętności [mnie wiecej] prezentuje ten projekt. Nie jest jednak skończony, wciąż nad nim pracuję.',
     },
     {
-      title: 'Ta strona powstała w celu posumowania tego gdzie jestem.',
-      text: 'Mam nadzieję, że Cię nie zanudziałam.',
+      title:
+        'Ta strona powstała w celu posumowania drogi ktora doprowadzila mnie do miejsca w ktorym obecnie się znajduję.',
+      text: 'Mam nadzieję, że Cię troszkę zainteresowałam :)',
     },
   ],
-  Summary: '. . . wszystko to zaprowadziło mnie to tego miejsca. . . ',
+  Summary: '. . . wszystko to zaprowadziło mnie to tego miejsca . . . ',
   Form: {
     name: 'imię',
     email: 'email',

@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
-export const Header = styled.header`
+export const Header = styled(motion.header)`
   position: relative;
-  height: 100vh;
+  /* height: 100vh; */
   background-color: ${({ theme }) => theme.primary};
   text-align: center;
 `;
@@ -17,13 +18,14 @@ export const Text = styled.div`
   color: ${({ theme }) => theme.secondary};
 `;
 
-export const Name = styled.p`
+export const Name = styled(motion.p)`
   margin: 0;
   font-size: 10vh;
   font-family: 'Charmonman', cursive;
+  opacity: 0;
 `;
 
-export const Description = styled.p`
+export const Description = styled(motion.p)`
   font-size: 3vh;
   margin: 0;
   margin-left: 35vw;
@@ -42,4 +44,10 @@ export const Description = styled.p`
     margin-left: 20vw;
     font-family: 'Charmonman', cursive;
   }
+`;
+
+export const Language = styled.div`
+  position: absolute;
+  top: 0;
+  right: 4vh;
 `;

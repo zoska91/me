@@ -8,6 +8,7 @@
   },
   "globals": {
     "document": true,
+    "window": true,
     "fetch": false
   },
   "parser": "babel-eslint",
