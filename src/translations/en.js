@@ -9,6 +9,7 @@ export default {
     long: 'long story',
   },
   Story: '. . . story of mine . . . ',
+  Hover: 'hover to run video',
   Timeline: [
     {
       title:
@@ -46,7 +47,7 @@ export default {
     },
     {
       title:
-        'TThis website has been created to summarize all of the actions that lead me to the place where I am now',
+        'This website has been created to summarize all of the actions that lead me to the place where I am now',
       text: 'I hope you enjoy :) ',
     },
   ],

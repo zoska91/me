@@ -9,6 +9,7 @@ export default {
     long: 'długą',
   },
   Story: '. . . moja historia . . . ',
+  Hover: 'najedź myszką w celu uruchomienia filmu',
   Timeline: [
     {
       title:
@@ -20,7 +21,7 @@ export default {
       title:
         'A potem... stworzyłam swój pierwszy projekt. I wiedziałam, że to.... nie będzie dobre.',
       text:
-        'Po drodze popełniłam mnóstwo mniejszych i większych przestępst w postaci okropnego kodu, z nadzieją na lepsze jutro.',
+        'Po drodze popełniłam mnóstwo mniejszych i większych przestępst w postaci okropnego kodu, zawsze mająć nadzieję na lepsze jutro.',
     },
     {
       title:
@@ -46,7 +47,7 @@ export default {
     },
     {
       title:
-        'Ta strona powstała w celu posumowania drogi ktora doprowadzila mnie do miejsca w ktorym obecnie się znajduję.',
+        'Ta strona powstała w celu podsumowania drogi, która doprowadzila mnie do miejsca, w którym obecnie się znajduję.',
       text: 'Mam nadzieję, że Cię troszkę zainteresowałam :)',
     },
   ],
