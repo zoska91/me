@@ -1,4 +1,4 @@
-# I would like to introdu introduce myself!
+# I would like to introduce myself!
 
 ## Feel free to visit this site and to know me
 
